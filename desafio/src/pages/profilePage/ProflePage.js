@@ -1,7 +1,10 @@
 import axios from "axios"
 import React, { useEffect, useState } from "react"
 import { useHistory, useParams } from "react-router"
-import { goToReposPage } from "../../routes/coordinator"
+import { goToReposPage, goToStarredPage } from "../../routes/coordinator"
+import { DivContainer, Img, Header, DivInfo, DivNav } from "./styled"
+import Button from '@material-ui/core/Button';
+
 
 export const ProfilePage = () => {
     const history = useHistory()
@@ -35,16 +38,29 @@ export const ProfilePage = () => {
          }
 }
 
-    return (<div>
-        <img src={user.avatar_url} />
-        <p>{user.name}</p>
-        <p>{user.login}</p>
+    return (<DivContainer>
+        
+        <Header>
+            <h3>#{user.login}</h3>
+            <Button variant= "contained" color = "primary">Voltar</Button>
+        </Header>
+        
+        <DivInfo>
+        <Img src={user.avatar_url} />
+        <h2>{user.name}</h2>
+        <h3>{user.bio}</h3>
+
+        <DivNav>
         <p>followers: {user.followers}</p>
         <p>following: {user.following}</p>
         <h1>Starred</h1>
-        <p>Starred: {starred.length}</p>
-        <h1>Repositórios</h1>
-        <p onClick={() => goToReposPage(history, user.login)}>{user.public_repos}</p>
-    </div>)
+        <p onClick={() => goToStarredPage(history, user.login)}>Starred: {starred.length}</p>
+        <Button variant= "contained" color = "primary" onClick={() => goToReposPage(history, user.login)}>{user.public_repos}</Button>
+        </DivNav>
+
+        </DivInfo>
+    
+    </DivContainer>
+    )
 
 }

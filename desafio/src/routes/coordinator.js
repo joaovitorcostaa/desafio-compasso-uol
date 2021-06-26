@@ -9,3 +9,7 @@ export const goToProfilePage = (history, nickname) => {
 export const goToReposPage = (history, nickname) => {
     history.push(`/repos/${nickname}`)
 }
+
+export const goToStarredPage = (history, nickname) => {
+    history.push(`/starred/${nickname}`)
+}
