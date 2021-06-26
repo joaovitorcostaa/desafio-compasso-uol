@@ -3,8 +3,9 @@ import {SearchPage} from "../pages/searchPage/SearchPage"
 import {ProfilePage} from "../pages/profilePage/ProflePage"
 import {ReposPage} from "../pages/reposPage/ReposPage"
 import { ErrorPage } from "../pages/errorPage/ErrorPage";
+import { StarredPage } from "../pages/starredPage/StarredPage";
 
-export default function Routes() {
+export default function Router() {
     return (
         <BrowserRouter>
             <Switch>
@@ -18,6 +19,10 @@ export default function Routes() {
 
                 <Route exact path = "/repos/:nickname">
                     <ReposPage />
+                </Route>
+
+                <Route exat path = "/starred/:nickname">
+                    <StarredPage />
                 </Route>
 
                 <Route>

@@ -17,7 +17,6 @@ export const ReposPage = () => {
         try {
             const repos = await axios.get(`https://api.github.com/users/${nickname}/repos`)
             setRepos(repos.data)
-            console.log(repos.data)
         } catch (error) {
             alert(error.response.data.message)
         }

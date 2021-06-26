@@ -2,6 +2,10 @@ import React from "react"
 import { useHistory } from "react-router"
 import useForm from "../../hooks/useForm";
 import { goToProfilePage } from "../../routes/coordinator";
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import { DivContainer, DivInput, DivButton, Img } from "./styled"
+import logo from "../../img/GitHub-Logo.png"
 
 export const SearchPage = () => {
 
@@ -19,18 +23,26 @@ export const SearchPage = () => {
     }
 
     return (
-        <div>
+        <DivContainer>
+            <h1>Pesquise um usuário</h1>
+            <Img alt= "logo" src={logo}/>
+            <DivInput>
             <form onSubmit = {handleClick} >
-                <input 
+                <TextField 
                 required
                 value = {form.nickname}
                 name = "nickname"
                 type = "text"
                 onChange = {onChange}
-                label = "nickname"
+                label = "Nickname"
+                variant = "standard"
+                color = "primary"
                 />
-                <button type="submit">pesquisar</button>
+                <DivButton>
+                <Button color= "primary" type="submit" variant = "contained">pesquisar</Button>
+                </DivButton>
             </form>
-        </div>
+            </DivInput>
+        </DivContainer>
     )
 }
