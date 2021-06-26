@@ -36,10 +36,10 @@ export const SearchPage = () => {
                 onChange = {onChange}
                 label = "Nickname"
                 variant = "standard"
-                color = "primary"
+                color = "secondary"
                 />
                 <DivButton>
-                <Button color= "primary" type="submit" variant = "contained">pesquisar</Button>
+                <Button color= "secondary" type="submit" variant = "contained">pesquisar</Button>
                 </DivButton>
             </form>
             </DivInput>

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import {secondarycolor} from "../../constants/colors"
+import {primarycolor} from "../../constants/colors"
 
 export const DivContainer = styled.div`
     display: flex;
@@ -8,7 +8,7 @@ export const DivContainer = styled.div`
     flex-direction: column;
     height: 100vh;
     width: 100%;
-    background: ${secondarycolor};
+    background: ${primarycolor};
     color: white;
 `
 
@@ -25,5 +25,8 @@ export const DivButton = styled.div`
 `
 
 export const Img = styled.img`
-    width: 40%;
+    width: 35%;
+    @media(max-width: 800px){
+        width: 82%;
+    }
 `
