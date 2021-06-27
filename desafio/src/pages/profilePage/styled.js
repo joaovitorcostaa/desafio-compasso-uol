@@ -7,6 +7,7 @@ export const DivContainer = styled.div`
     flex-direction: column;
     background: ${primarycolor};
     color: white;
+    justify-content: center;
     `
 export const Img = styled.img`
     width: 15%;
@@ -19,6 +20,7 @@ export const Img = styled.img`
 export const Header = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 95%;
     height: 10vh;
 `
@@ -28,11 +30,12 @@ export const DivInfo = styled.div`
     height: 90vh;
     width: 100%;
     align-items: center;
-    flex-direction: column;
+justify-content: center;
 `
 
 export const Bio = styled.div`
-    height: 15%;
+    width: 100%;
+    flex-wrap: wrap;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,4 +54,8 @@ export const DivNav = styled.div`
         justify-content: space-around;
         height: 45%;
     }
+`
+
+export const DivButton = styled.div`
+    height: 35%;
 `

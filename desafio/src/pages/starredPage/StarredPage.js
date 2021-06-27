@@ -1,6 +1,7 @@
 import axios from "axios"
 import React, { useEffect, useState } from "react"
 import { useHistory, useParams } from "react-router"
+import { DivContainer } from "./styled"
 
 export const StarredPage = () => {
     const history = useHistory()
@@ -22,11 +23,11 @@ export const StarredPage = () => {
         }
 }
 
-    return (<div>
+    return (<DivContainer>
         {starred && starred.map((starred)=> {
     return (<div>
-        <p>{starred.name}</p>
+        <h1>{starred.name}</h1>
     </div>)
 } )}
-</div>)
+</DivContainer>)
 }

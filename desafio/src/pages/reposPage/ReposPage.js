@@ -1,6 +1,7 @@
 import axios from "axios"
 import React, { useEffect, useState } from "react"
 import { useHistory, useParams } from "react-router"
+import { DivContainer } from "./styled"
 
 export const ReposPage = () => {
     const history = useHistory()
@@ -22,11 +23,11 @@ export const ReposPage = () => {
         }
     }
 
-    return <div>
+    return <DivContainer>
         {repos && repos.map((repo) => {
             return (<div>
-                <p>{repo.name}</p>
+                <h1>{repo.name}</h1>
                 </div>)
         })}
-    </div>
+    </DivContainer>
 }
