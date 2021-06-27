@@ -11,6 +11,14 @@ export const DivContainer = styled.div`
     overflow: auto;
     `
 
+export const DivButton = styled.div`
+    margin-bottom: 6px;
+`
+
+export const DivBackButton = styled.div`
+    height: 60%;
+`
+
 export const Header = styled.div`
     display: flex;
     justify-content: space-between;
