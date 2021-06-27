@@ -30,15 +30,13 @@ export const DivInfo = styled.div`
     height: 90vh;
     width: 100%;
     align-items: center;
-justify-content: center;
+    justify-content: center;
 `
 
 export const Bio = styled.div`
-    width: 100%;
-    flex-wrap: wrap;
     display: flex;
     justify-content: center;
-    align-items: center;
+    width: 60%;
 `
 
 export const DivNav = styled.div`
