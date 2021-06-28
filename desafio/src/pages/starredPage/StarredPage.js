@@ -27,12 +27,13 @@ export const StarredPage = () => {
     }
 
     const starredList = starred && starred.map((starred) => {
-        return (<Card key={starred.name} name = {starred.name}/>)})
+        return (<Card key={starred.name} name={starred.name} />)
+    })
 
     return (<DivContainer>
         <Header>
-        <h2>Starreds</h2>
-        <Button onClick={() => goToProfilePage(history, nickname)} variant="contained" color="secondary">Voltar</Button>
+            <h2>Repositórios estrelados</h2>
+            <Button onClick={() => goToProfilePage(history, nickname)} variant="contained" color="secondary">Voltar</Button>
         </Header>
         {starred[0] ? starredList : <h1>Nenhum repositório com estrela encontrado</h1>}
     </DivContainer>)

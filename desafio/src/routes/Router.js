@@ -27,12 +27,12 @@ export default function Router() {
                     <StarredPage />
                 </Route>
 
-                <Route exat path = "/followers/:nickname">
+                <Route exat path="/followers/:nickname">
                     <FollowersPage />
                 </Route>
 
-                <Route exact path = "/following/:nickname">
-                    <FollowingPage  />
+                <Route exact path="/following/:nickname">
+                    <FollowingPage />
                 </Route>
 
                 <Route>

@@ -27,14 +27,15 @@ export const ReposPage = () => {
     }
 
     const reposList = repos && repos.map((repo) => {
-        return (<Card key = {repo.name} name = {repo.name}/>)})
+        return (<Card key={repo.name} name={repo.name} />)
+    })
 
     return <DivContainer>
-            <Header>
+        <Header>
             <h2>Repositórios</h2>
             <Button onClick={() => goToProfilePage(history, nickname)} variant="contained" color="secondary">Voltar</Button>
-            </Header>
+        </Header>
         {repos[0] ? reposList : <h1>Nenhum repositório encontrado</h1>}
-        
+
     </DivContainer>
 }

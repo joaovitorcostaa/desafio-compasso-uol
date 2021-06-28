@@ -50,9 +50,9 @@ export const ProfilePage = () => {
                 <h3>{user.bio}</h3>
             </Bio>
             <DivNav>
-                <Button variant="contained" color="secondary" onClick = {() => goToFollowersPage(history, user.login)}>Seguidores: {user.followers} usuário(s)</Button>
-                <Button variant="contained" color="secondary" onClick = {() => goToFollowingPage(history, user.login)}>Seguindo: {user.following} usuário(s)</Button>
-                <Button variant="contained" color="secondary" onClick={() => goToStarredPage(history, user.login)}>{starred.length} repositório(s) starred</Button>
+                <Button variant="contained" color="secondary" onClick={() => goToFollowersPage(history, user.login)}>Seguidores: {user.followers} usuário(s)</Button>
+                <Button variant="contained" color="secondary" onClick={() => goToFollowingPage(history, user.login)}>Seguindo: {user.following} usuário(s)</Button>
+                <Button variant="contained" color="secondary" onClick={() => goToStarredPage(history, user.login)}>{starred.length} repositório(s) estrelado(s)</Button>
                 <Button variant="contained" color="secondary" onClick={() => goToReposPage(history, user.login)}>{user.public_repos} repositório(s)</Button>
             </DivNav>
         </DivInfo>
