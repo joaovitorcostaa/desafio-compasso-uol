@@ -28,14 +28,18 @@ export const FollowingPage = () => {
     }
 
     const followingList = following && following.map((following) => {
-        return <DivButton key = {following.login}> <Button variant="contained" color="secondary" onClick={() => goToProfilePage(history, following.login)}>{following.login}</Button> </DivButton>
+        return <DivButton key={following.login}>
+            <Button variant="contained" color="secondary" onClick={() => goToProfilePage(history, following.login)}>{following.login}</Button>
+        </DivButton>
     })
 
     return <DivContainer>
-    <Header>
-        <h3>Seguindo</h3>
-       <DivBackButton> <Button variant="contained" color="secondary" onClick = {() => goToProfilePage(history, nickname)}>Voltar</Button> </DivBackButton> 
-    </Header>
-    {following ? followingList : <CircularProgress color="secondary" />}
-</DivContainer>
+        <Header>
+            <h3>Seguindo</h3>
+            <DivBackButton>
+                <Button variant="contained" color="secondary" onClick={() => goToProfilePage(history, nickname)}>Voltar</Button>
+            </DivBackButton>
+        </Header>
+        {following ? followingList : <CircularProgress color="secondary" />}
+    </DivContainer>
 }

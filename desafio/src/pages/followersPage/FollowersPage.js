@@ -28,13 +28,15 @@ export const FollowersPage = () => {
     }
 
     const followersList = followers && followers.map((follower) => {
-        return <DivButton key = {follower.login}> <Button variant="contained" color="secondary" onClick={() => goToProfilePage(history, follower.login)}>{follower.login}</Button> </DivButton>
+        return <DivButton key={follower.login}> <Button variant="contained" color="secondary" onClick={() => goToProfilePage(history, follower.login)}>{follower.login}</Button> </DivButton>
     })
 
     return <DivContainer>
         <Header>
             <h3>Seguidores</h3>
-           <DivBackButton> <Button variant="contained" color="secondary" onClick = {() => goToProfilePage(history, nickname)} >Voltar</Button> </DivBackButton> 
+            <DivBackButton>
+                <Button variant="contained" color="secondary" onClick={() => goToProfilePage(history, nickname)} >Voltar</Button>
+            </DivBackButton>
         </Header>
         {followers ? followersList : <CircularProgress color="secondary" />}
     </DivContainer>

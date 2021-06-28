@@ -18,7 +18,7 @@ export const SearchPage = () => {
 
     const [form, onChange, clear] = useForm(initialForm)
 
-    const getUser = async(event) => {
+    const getUser = async (event) => {
         event.preventDefault()
         try {
             const user = await axios.get(`https://api.github.com/users/${form.nickname}`)
